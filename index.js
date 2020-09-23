@@ -30,6 +30,7 @@ const mongoStorage = {
     return new Promise(function(resolve, reject){
       mongoose.connect(settings.mongoURI, mongoose_options)
       .then(() => {
+        // console.log("connected to storage db");
         resolve();
       })
       .catch(err => {
@@ -90,12 +91,14 @@ const mongoStorage = {
     })
   },
   getSettings: function() {
+    // console.log("looking for settings")
     return new Promise(function(resolve, reject) {
       Settings.findOne({appname: appname}, function(err, setts){
         if (err) {
           reject(err);
         } else {
           if (setts) {
+            // console.log("settings found");
             resolve(setts.settings);
           } else {
             resolve({});
@@ -116,13 +119,14 @@ const mongoStorage = {
     })
   },
   getSessions: function() {
+    // console.log("looking for session");
     return new Promise(function(resolve, reject) {
       Sessions.findOne({appname: appname}, function(err, sessions){
         if (err) {
           reject(err);
         } else {
           if (sessions) {
-            console.log("found session")
+            // console.log("found session")
             resolve(sessions.sessions);
           } else {
             resolve({});
