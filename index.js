@@ -9,7 +9,9 @@ const Library = require('./models/library');
 
 var mongoose_options = {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
 };
 
 var settings;
