@@ -1,10 +1,10 @@
 {
   "name": "node-red-contrib-storage-mongodb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A MongoDB Node-RED Storage Plugin",
   "repository": {
     "type": "git",
-    "url": "https://node-red-contrib-storage-mongodb"
+    "url": "https://github.com/hardillb/node-red-contrib-storage-mongodb"
   },
   "bugs": "https://github.com/hardillb/node-red-contrib-storage-mongodb/issues",
   "main": "index.js",
